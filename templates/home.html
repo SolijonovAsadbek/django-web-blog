@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home| Page
+{% endblock %}
+{% block content %}
+    <div class="three wide row">
+        {% for post in object_list %}
+            <div class="ui people shape">
+                <div class="sides">
+                    <div class="side active">
+                        <div class="ui card">
+                            <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiT2g5LwdoZwXPL2pgweNelG7pqSK89N6iM7Wg9pktOx0X-YzyGGYf0ADgcqIiGs32Jmg&usqp=CAU"
+                                     alt="assa">
+                            </div>
+                            <div class="content">
+                                <div class="header">{{ post.author }}</div>
+                                <div class="meta">
+                                    <a>{{ post.title }}</a>
+                                </div>
+                                <div class="description">
+                                    {{ post.body }}
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                    <span class="right floated">
+                                        Joined in 2014
+                                    </span>
+                                <span>
+                                        <i class="user icon"></i>
+                                        151 Friends
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="ui card">
+                            <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiT2g5LwdoZwXPL2pgweNelG7pqSK89N6iM7Wg9pktOx0X-YzyGGYf0ADgcqIiGs32Jmg&usqp=CAU"
+                                     alt="phoy">
+                            </div>
+                            <div class="content">
+                                <a class="header">Stevie Feliciano</a>
+                                <div class="meta">
+                                    <span class="date">Joined in 2014</span>
+                                </div>
+                                <div class="description">
+                                    Stevie Feliciano is a library scientist living in New York City. She likes to
+                                    spend her time reading, running, and writing.
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <a>
+                                    <i class="user icon"></i>
+                                    22 Friends
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
