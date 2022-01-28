@@ -5,12 +5,23 @@
 {% endblock %}
 
 {% block content %}
-    <h2 class="ui center aligned header">
+    <div class="ui center aligned header">
         <a href="{% url 'home' %}"><i class="fas fa-times how"></i></a>
         <div class="content">
-            <h4 class="ui header segment" style="width: 300px"><i class="fas fa-feather"></i> {{ post.title }}
+            <h4 class="ui header segment" style="width: 300px">
+                <i class="fas fa-feather"></i> {{ post.title }}
                 <hr>
                 <br> {{ post.body }}</h4>
         </div>
-    </h2>
+{#        <div class="ui teal button" id="flip">Magic</div>#}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+            integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{#    <script>#}
+{#        $('#flip').click(function () {#}
+{#            $('.content').shape('flip up');});#}
+{#    </script>#}
+
 {% endblock %}
