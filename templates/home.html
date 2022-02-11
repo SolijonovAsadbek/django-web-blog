@@ -4,6 +4,16 @@
     Home| Page
 {% endblock %}
 {% block content %}
+    <div class="ui container">
+        <a class="ui black tag label">News</a>
+        <div class="ui three item menu">
+            <a class="active item">Editorials</a>
+            <a class="item">Reviews</a>
+            <a class="item">Upcoming Events</a>
+        </div>
+        <div class="ui divider">
+        </div>
+    </div>
     <div class="ui grid center aligned" style="margin: 50px;">
         {% for post in object_list %}
             <div class="ui people shape" style="margin-bottom: 10px;">
